@@ -41,3 +41,15 @@ def nested_loop(num):
 
 print(nested_loop(3))
 
+list2=["abc","def","ghi"]
+def rev_list(given_list):
+    rev_bhayeko_list=[]
+    for items in given_list:
+        rev_bhayeko_list.append(items[::-1])
+    return rev_bhayeko_list
+returned_val=rev_list(list2)
+print(returned_val)
+
+def rev_of_list(abc):
+    return[items[::-1] for items in abc]
+print(rev_of_list(["abc","def","ghi"]))
