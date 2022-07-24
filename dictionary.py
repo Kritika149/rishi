@@ -114,6 +114,16 @@ def countchar(name):
 
 print(countchar("kritika"))
 
+
+
+
+
+
+
+
+
+
+
         
 
 
