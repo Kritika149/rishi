@@ -68,61 +68,71 @@
 # print(to_power(num,*l1))    
 
 # list_to_num=input("enter a number to form list:").split(",")
-# print(*list_to_num)
+# # print(*list_to_num)
 
 
-#kwargs takes value in dictionary
+# #kwargs takes value in dictionary
 
-def sum_all_num(**kwargs):
-    print(type(kwargs))
+# def sum_all_num(**kwargs):
+#     print(type(kwargs))
 
-    for key,value in kwargs.items():
-        print(f"{key}:{value}")
+#     for key,value in kwargs.items():
+#         print(f"{key}:{value}")
 
-print(sum_all_num(first_name="Arayama",last_name="sharma"))
-
-
+# print(sum_all_num(first_name="Arayama",last_name="sharma"))
 
 
 
-dict={"a":1,"b":2,"c":3}
 
-def sum_func(**kwargs):
+
+# dict={"a":1,"b":2,"c":3}
+
+# def sum_func(**kwargs):
+#     sum=0
+#     for val in kwargs.values():
+#         sum+=val
+#     return sum
+# print(sum_func(**dict))
+
+
+
+# ##PADK (parameter,args,default,kwargs)
+
+# def user_info(name,*args,address="unknown",**kwargs):
+#     print(name)
+#     print(args)
+#     print(address)
+#     print(kwargs)
+
+# user_info("maharshi",1,2,4,address="ktm",p=12,q=13)
+
+# is_reverse=False
+
+
+# list_of_names=["aryama","kriitka","rushav","samay","maharshi"]
+
+
+# def capital(names_list,**kwargs):
+#     ''' to reverse you must give {is_reverse=true} either or true'''
+#     if kwargs.get("is_reverse"):
+#         return[name[-1::-1].title() for name in names_list]
+
+#     else:
+#         return[name.title() for name in names_list]
+
+
+# print(capital(list_of_names))
+# print(capital.__doc__)
+
+user_given_numbers=input("enter numbers").split(",")
+# print(type(user_given_numbers))
+
+def calculator_sum(*args):
     sum=0
-    for val in kwargs.values():
-        sum+=val
+    for num in args:
+        sum+=int(num)
     return sum
-print(sum_func(**dict))
-
-
-
-##PADK (parameter,args,default,kwargs)
-
-def user_info(name,*args,address="unknown",**kwargs):
-    print(name)
-    print(args)
-    print(address)
-    print(kwargs)
-
-user_info("maharshi",1,2,4,address="ktm",p=12,q=13)
-
-is_reverse=False
-
-
-list_of_names=["aryama","kriitka","rushav","samay","maharshi"]
-
-
-def capital(names_list,**kwargs):
-    ''' to reverse you must give {is_reverse=true} either or true'''
-    if kwargs.get("is_reverse"):
-        return[name[-1::-1].title() for name in names_list]
-
-    else:
-        return[name.title() for name in names_list]
-
-
-print(capital(list_of_names))
-print(capital.__doc__)
+print(calculator_sum(*user_given_numbers))
 
 
 
