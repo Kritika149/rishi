@@ -1,54 +1,3 @@
-#closure
-
-
-def square(a):
-    return a**2
-
-# s=square
-
-# print(s(7))
-# print(s.__name__) #==>to name the function s
-# print(square.__name__) 
-
-
-
-# print(list(map(lambda a:a**2,[1,2,3])))
-
-any_list1= [1,2,3]
-any_list2= [4,5,6]
-
-def my_own_func(func,l):
-    new_list=[]
-    for item in l:
-        new_list.append(func(item))
-    return new_list
-
-def cube(num):
-    return num**3
-
-print(list(map(cube,[1,2,3])))
-
-def mero_aafnai_map(func,list):
-    new_list=[]
-    for element in list:
-        new_list.append(func(element))
-    return new_list
-
-print(mero_aafnai_map(cube,any_list2))
-
-
-#function return function
-
-def  out_func():
-    def in_func():
-        print("Hello done")
-    return in_func
-
-any_variable=out_func()
-any_variable()    # calling second function
-
-
-
 """
 ------------>  Closure  <------------
 ------------------------------------------
@@ -133,6 +82,31 @@ to_power = cube_off(4)
 print(to_power(3))
 
 
+'''
+------------> Decorators 1 <-------------
+------------------------------------------
+It enhance the functionality of other functions.
+Why we need this?
+'''
+def decorator_function(any_function):
+	def wrapper_function():
+		print('This is extra function')
+		any_function()
+	return wrapper_function
+# Extra line --> 'This is extra function'
+def fun1(): 
+	print("function-->1")
 
+# Extra line --> 'This is extra function'
+@decorator_function
+def fun2(): 
+	print("function-->2")
 
-    
+fun1()
+# Now, to define decorators functions,
+
+# func = decorator_function(fun2)
+# func()
+
+fun2()
+## Syntactic Sugar in python symbol --> @ use for decorator
