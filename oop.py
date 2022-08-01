@@ -120,6 +120,45 @@ print(new_laptop.my_func())
 4) Static methods as constructor
 # class method has relation with class
 # self method has relation with instances/object
-# but static methos has no relation with either class or object/instance.
+# but static method has no relation with either class or object/instance.
 # it is created with @staticmethod decorator.
 '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
