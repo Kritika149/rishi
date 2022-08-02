@@ -129,7 +129,27 @@ print(object_c.my_method())
 
 
 print(help(C)) #--> give Method Resolution Order (MRO) 
-print(C.mro()) #--> sameg
+print(C.mro()) #--> same
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
